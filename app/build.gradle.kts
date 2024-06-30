@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    //implementation(libs.androidx.compose.ui:ui:1.0.5)
     //implementation(androidx.activity:activity-ktx:1.1.0)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -14,7 +14,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import to.msn.wings.hackathon_bata.ui.component.SimpleButton
+import to.msn.wings.hackathon_bata.ui.component.BlueButton
+import to.msn.wings.hackathon_bata.ui.component.OrangeButton
 import to.msn.wings.hackathon_bata.ui.screen.study.StudyInfomationScreen
 import to.msn.wings.hackathon_bata.ui.screen.study.StudyThingsScreen
 import to.msn.wings.hackathon_bata.ui.theme.Hackathon_BATATheme
@@ -42,14 +43,14 @@ fun SelectScreen(
         }
         when (selected) {
             0 -> when (id){
-                0-> StudyThingsScreen()
+                0-> StudyInfomationScreen()
                 1-> Text(text = "1")
                 2-> Text(text = "2")
                 3-> Text(text = "3")
                 else -> Text(text = "else")
             }
             1 -> when (id){
-                0-> StudyInfomationScreen()
+                0-> StudyThingsScreen()
                 1-> Text(text = "1")
                 2-> Text(text = "2")
                 3-> Text(text = "3")
@@ -72,9 +73,9 @@ fun SelectButton(
         modifier = Modifier,
         horizontalArrangement = Arrangement.SpaceEvenly,
     ){
-        SimpleButton("   もの   ",1, onClick,Modifier.fillMaxWidth(0.5f))//もの
+        OrangeButton("   こと   ",0, onClick,Modifier.fillMaxWidth(0.5f))//こと
         Text(text = "                              ")
-        SimpleButton("   こと   ",0, onClick,Modifier.fillMaxWidth(0.5f))//こと
+        BlueButton("   もの   ",1, onClick,Modifier.fillMaxWidth(0.5f))//もの
         //Text(text = "\n")
 
     }

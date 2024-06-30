@@ -110,6 +110,55 @@ fun SimpleButtonPreview (){
     }
 }
 @Composable
+fun BlueButton(
+    name: String = "LoadFailed",
+    id: Int,
+    onClick: (Int) -> Unit,
+    modifier: Modifier = Modifier.fillMaxWidth()
+) {
+    OutlinedButton(
+        modifier = Modifier.wrapContentWidth(),
+        onClick = {onClick(id) },
+        colors = ButtonDefaults.buttonColors(
+            //テキスト色設定⇒ContentColor
+            contentColor = Color.White,
+            //背景色設定⇒ContainerColor
+            containerColor = Color(25, 71, 136)//.hsl(215f,69f,32f)
+
+        )
+    ) {
+        Text(
+            text = name,
+            fontSize = 12.sp,
+        )
+    }
+}
+@Composable
+fun OrangeButton(
+    name: String = "LoadFailed",
+    id: Int,
+    onClick: (Int) -> Unit,
+    modifier: Modifier = Modifier.fillMaxWidth()
+) {
+    OutlinedButton(
+        modifier = Modifier.wrapContentWidth(),
+        onClick = {onClick(id) },
+        colors = ButtonDefaults.buttonColors(
+            //テキスト色設定⇒ContentColor
+            contentColor = Color.White,
+            //背景色設定⇒ContainerColor
+            containerColor = Color(244, 131, 52)//.hsl(215f,69f,32f)
+
+        )
+    ) {
+        Text(
+            text = name,
+            fontSize = 12.sp,
+        )
+    }
+}
+
+@Composable
 fun SimpleButton(
     name: String = "LoadFailed",
     id: Int,
@@ -152,7 +201,7 @@ fun AddButtonPreview (){
             //modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
-            AddButton()
+            BlueButton(onClick = {},id = 1)
         }
     }
 }
